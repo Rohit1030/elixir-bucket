@@ -1,0 +1,21 @@
+@import "styles/variables.scss";
+
+.icon-button {
+  :global(.ant-btn-icon-only) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: $secondary-100;
+    padding: 0px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $primary-100;
+      color: $primary;
+    }
+  }
+}

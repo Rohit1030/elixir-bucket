@@ -1,0 +1,227 @@
+@import "styles/variables.scss";
+
+.container {
+  @media only screen and (min-width: $xl) {
+    margin: 2rem 30%;
+  }
+
+  @media only screen and (max-width: $xl) {
+    margin: 2rem 20%;
+  }
+
+  @media only screen and (max-width: $lg) {
+    margin: 1rem 15%;
+  }
+
+  @media only screen and (max-width: $md) {
+    margin: 1rem 10%;
+  }
+
+  @media only screen and (max-width: $sm) {
+    margin: 1rem;
+  }
+
+  .icon {
+    vertical-align: middle;
+    // font-size: 24px;
+  }
+}
+
+.with-sider {
+  :global(.ant-layout-sider) {
+    min-width: 250px !important;
+    max-width: fit-content !important;
+  }
+
+  :global(.ant-list-empty-text) {
+    padding: 0px !important;
+  }
+
+  :global(.ant-list-items) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .ant-card {
+      cursor: pointer;
+    }
+  }
+}
+
+.task-detail-container {
+  @media only screen and (min-width: $lg) {
+    margin: 2rem 5%;
+  }
+
+  @media only screen and (max-width: $lg) {
+    margin: 1rem 3%;
+  }
+
+  @media only screen and (max-width: $md) {
+    margin: 1rem 1.5%;
+  }
+
+  @media only screen and (max-width: $sm) {
+    margin: 1rem;
+  }
+}
+
+.header {
+  padding: 0 10px;
+  z-index: 1;
+  background-color: $background;
+  border-bottom: 2px solid $gray-300;
+  // box-shadow: -3px -11px 20px 0px #08090e;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  transition: width 250ms ease-in-out;
+  position: relative;
+
+  &-opened {
+    @extend .header;
+    width: calc(100vw - 250px);
+    transition: width 250ms ease-in-out;
+  }
+
+  .header-others {
+    position: fixed;
+    top: 12px;
+    right: 0px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $gray-300;
+  }
+
+}
+
+.header-button {
+  flex-shrink: 0;
+  height: 40px;
+  width: 40px;
+  background-color: $gray-200;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $primary-100;
+    color: $primary;
+  }
+}
+
+.profile-popover {
+  .name {
+    font-weight: 700;
+  }
+
+  .email {
+    font-size: $text-sm;
+    color: $gray-500;
+  }
+
+}
+
+.menu-popover {
+  :global(.ant-menu-item) {
+    padding: 0 $marg-md !important;
+    margin: 0 !important;
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+}
+
+.sider {
+  background-color: $gray-200;
+  border-right: 2px solid $gray-300;
+  min-height: 100vh !important;
+}
+
+.sidemenu-container {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  :global(.ant-menu-root.ant-menu-vertical),
+  :global(.ant-menu-root.ant-menu-vertical-left),
+  :global(.ant-menu-root.ant-menu-vertical-right),
+  :global(.ant-menu-root.ant-menu-inline) {
+    background-color: $gray-200;
+  }
+
+  :global(.ant-menu-sub.ant-menu-inline) {
+    background-color: $gray-200;
+    max-height: 200px;
+    overflow-y: auto;
+
+    :global(.ant-menu-item) {
+      padding-left: 36px !important;
+    }
+  }
+
+  :global(.ant-menu-item) {
+    padding-left: $marg-xl !important;
+  }
+
+  :global(.ant-menu-submenu-title) {
+    padding-left: $marg-xl !important;
+    margin-left: 10px;
+
+    &:active {
+      background-color: $gray-200;
+    }
+
+    svg {
+      font-size: 1rem !important;
+    }
+  }
+
+  footer {
+    margin-top: auto;
+    font-size: $text-xs;
+    text-align: center;
+    padding-bottom: $marg-xl;
+  }
+}
+
+.drawer {
+  :global(.ant-drawer-content-wrapper) {
+    width: 250px !important;
+  }
+}
+
+.notification-container {
+  min-width: 30vw;
+
+  :global(.ant-popover-inner-content) {
+    padding: 0;
+  }
+
+  :global(.ant-list-item) {
+    padding: 12px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    min-width: 70vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    min-width: 95vw;
+  }
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    font-size: $text-xs;
+    // text-align: center;
+    padding: $marg-md $marg-xl;
+  }
+}

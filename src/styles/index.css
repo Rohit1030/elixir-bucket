@@ -1,0 +1,37 @@
+@import "_antd.css";
+@import "fonts.css";
+@import "override.css";
+
+:root {
+  --primary: #4460f1;
+  --primary-100: #dadffc;
+  --primary-200: #cfd7f7;
+  --primary-400: #708dff;
+  /* @secondary-100: #e2e4ee; */
+  /* @secondary-200: #dee0ea; */
+  /* @background: #f0f2f5; */
+  --success: #5cdd2c;
+  --error: #ff4d4f;
+  --warning: #faad14;
+
+  --green: #43d1a7;
+  --yellow: #ff862e;
+  --purple: #9646ef;
+  --orange: #f38650;
+
+  --gray-10: #fafcff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+
+  --background: var(--gray-100);
+  --secondary-100: var(--gray-200);
+  --secondary-200: var(--gray-300);
+}

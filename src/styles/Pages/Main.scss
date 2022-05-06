@@ -1,0 +1,112 @@
+@import "../variables.scss";
+
+.main-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 200px auto;
+
+  @media screen and (max-width: $lg) {
+    background-color: white;
+  }
+
+  .main-form-content {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @media screen and (min-width: $lg) {
+      grid-column-start: 1;
+      grid-column-end: 7;
+    }
+
+    @media screen and (max-width: $lg) {
+      grid-column-start: 1;
+      grid-column-end: 8;
+    }
+
+    @media screen and (max-width: $md) {
+      grid-column-start: 1;
+      grid-column-end: 10;
+    }
+
+    @media screen and (max-width: $sm) {
+      grid-row: 1 / 3;
+      grid-column: span 12;
+    }
+
+    .index-margin {
+      display: grid;
+      height: 100vh;
+
+      @media screen and (min-width: $lg) {
+        margin: 0rem 5rem;
+      }
+
+      @media screen and (max-width: $lg) {
+        margin: 0rem 2rem;
+      }
+
+      @media screen and (max-width: $md) {
+        margin: 0rem 1.5rem;
+      }
+
+      @media screen and (max-width: $sm) {
+        margin: 0rem 0.5rem;
+      }
+
+      align-content: center;
+
+      &>.card {
+        background-color: white;
+        border-radius: 24px;
+        box-shadow: 0px 2px 16px hsl(211deg 25% 84% / 40%);
+
+        @media screen and (min-width: $lg) {
+          background-color: transparent;
+          box-shadow: none;
+        }
+
+        @media screen and (max-width: $lg) {
+          padding: 2rem;
+        }
+
+        @media screen and (max-width: $md) {
+          padding: 2rem;
+        }
+
+        @media screen and (max-width: $sm) {
+          padding: 0.5rem;
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .header-image-container {
+    grid-row: 1 / -1;
+    grid-column: 7 / -1;
+
+    @media screen and (max-width: $sm) {
+      grid-row: 1 / 2;
+      grid-column: span 12;
+      display: none;
+    }
+
+    .header-image {
+      width: 100%;
+      height: 100%;
+      background: url("../../assets/images/hero_image.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @media screen and (max-width: $sm) {
+        // background-size: max(60%, 300px);
+        display: none;
+      }
+    }
+  }
+}
